@@ -69,31 +69,31 @@ export class DialogService {
 
 
     private convertButtons(buttonType:DialogButtonType[]):DialogButtonModel[]{
-        let buttons:any[] = [];
+        let buttons:DialogButtonModel[] = [];
 
         buttonType.forEach(type =>{
-            let btn = null;
+            let btn;
 
             if(type === DialogButtonType.OK){
                 btn = {
                     id: DialogButtonType.OK,
                     translationKey: "i18n.Generic.Ok", 
                     color:DialogButtonColor.NORMAL,
-                } as DialogButtonModel; 
+                }; 
             }
             else if(type === DialogButtonType.PROCEED){
                 btn = {
                     id: DialogButtonType.PROCEED,
                     translationKey: "i18n.Generic.Close", 
                     color:DialogButtonColor.NORMAL,
-                }as DialogButtonModel;
+                }; 
             }
             else if(type === DialogButtonType.CLOSE){
                 btn = {
                     id: DialogButtonType.CLOSE,
                     translationKey: "i18n.Generic.Close", 
                     color:DialogButtonColor.NORMAL,
-                }as DialogButtonModel;
+                }; 
             }
             //red color
             else if(type === DialogButtonType.CLOSE_RED){
@@ -101,14 +101,14 @@ export class DialogService {
                     id: DialogButtonType.CLOSE,
                     translationKey: "i18n.Generic.Close", 
                     color:DialogButtonColor.RED,
-                }as DialogButtonModel;
+                }; 
             }
             else if(type === DialogButtonType.CANCEL){
                 btn = {
                     id: DialogButtonType.CANCEL,
                     translationKey: "i18n.Generic.Cancel", 
                     color:DialogButtonColor.RED,
-                }as DialogButtonModel;
+                }; 
             }
             else{
                 console.error("Do not have settings for type DialogButtonType: " + type);

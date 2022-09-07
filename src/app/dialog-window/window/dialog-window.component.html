@@ -1,0 +1,22 @@
+﻿<div *ngIf="visible" class="modal-window">
+    <div class="modal-window-body">
+        <div class="content">
+            <div class="title">
+                <h1>{{model.title}}</h1>
+            </div>
+    
+            <div class="message">
+                {{model.message}}
+            </div>
+    
+            <div class="buttons">
+                <button *ngFor="let btn of model.buttons" [ngClass]="btn.color" (click)="buttonClick(btn)">{{btn.text}}</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="modal-window-background">
+    </div>
+
+</div>

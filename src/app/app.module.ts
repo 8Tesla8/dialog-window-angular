@@ -5,25 +5,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DialogButtonsComponent, DialogTitleComponent } from './dialog-window';
-import { TranslateModule } from '@ngx-translate/core';
+import { DialogStorageService } from './dialog-window/service/dialog-storage.service';
+import { DialogWindowService } from './dialog-window/service/dialog.service';
+import { DialogWindowComponent } from './dialog-window/window/dialog-window.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
-    DialogButtonsComponent,
-    DialogTitleComponent,
+    DialogWindowComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     CommonModule,
-
-    TranslateModule,
   ],
-  providers: [],
+  providers: [
+    DialogWindowService,
+    DialogStorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
