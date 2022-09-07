@@ -1,0 +1,22 @@
+.dialog-window-title {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 35px;
+
+    .title-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height:100%;
+        width: 35px;
+    }
+    .title{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}

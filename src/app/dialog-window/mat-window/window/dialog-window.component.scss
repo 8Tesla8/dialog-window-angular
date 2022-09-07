@@ -1,0 +1,12 @@
+.content{
+    padding: 25px;
+
+    min-width: 500px;
+    min-height: 130px;
+
+    .message{
+        word-wrap: break-word;
+        overflow-y: auto;
+        max-height: 50vh;
+    }
+}

@@ -1,0 +1,12 @@
+﻿<app-dialog-title *ngIf="model.title" [titleModel]="model.title"></app-dialog-title>
+
+<div class="content app-background-neutral-dark">
+
+    <div class="message app-text-dark">
+        <span>{{ model.message.translationKey| translate}}</span>
+        <span>{{ model.message.additionalText }}</span>
+    </div>
+
+</div>
+
+<app-dialog-buttons [buttons]="model.buttons" (onButtonClick)="buttonClick($event)"></app-dialog-buttons>

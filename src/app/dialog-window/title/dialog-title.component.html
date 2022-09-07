@@ -1,0 +1,15 @@
+﻿<div class="dialog-window-title app-background-main app-text-light">
+
+    <mat-icon *ngIf="titleModel.icon" class="app-background-main-dark title-icon">
+        {{ titleModel.icon }}
+    </mat-icon>
+
+    <!-- <mat-icon *ngIf="titleModel.iconPath" class="app-background-main-dark  title-icon">
+        {{ titleModel.icon }}
+    </mat-icon> -->
+
+    <span class="title">
+        {{ titleModel.translationKey | translate}} {{titleModel.additionalText}}
+    </span>                
+
+</div>

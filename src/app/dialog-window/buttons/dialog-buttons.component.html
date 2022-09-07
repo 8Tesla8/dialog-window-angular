@@ -1,0 +1,6 @@
+﻿<div class="dialog-window-buttons app-background-neutral-light">
+    <div *ngFor="let btn of buttons" (click)="buttonClick(btn)" class="button"
+        [ngClass]="btnColor(btn)">
+        {{btn.translationKey | translate}} {{btn.additionalText}}
+    </div>
+</div>
