@@ -18,25 +18,22 @@ export class DialogWindowComponent {
     ) {
         this._dialogStorageService.observableDataForWindow().subscribe(
             data =>{
-                this.visible = !this.isModelEmpty(data);
-                this.model = data; 
+                if(data){                    
+                    this.visible = true;
+                    this.model = data; 
+                }
+                else 
+                {
+                    this.visible = false;
+                }
             });
     }
 
     public buttonClick(btn: DialogButtonModel): void {
         this.visible = false;
 
-        if(btn.clickHandler !== undefined) {
+        if(btn.clickHandler) {
             btn.clickHandler(btn);
         }
-
-        // this._dialogStorageService.setDataFromWindow(btn);
-    }
-
-    isModelEmpty(model: DialogWindowModel): boolean {
-        if(!model.message && !model.title && !model.buttons)
-            return true;
-
-        return false;
     }
 }

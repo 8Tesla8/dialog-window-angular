@@ -14,9 +14,7 @@ export class AppComponent {
 
   constructor(
     private readonly _dialogService: DialogWindowService
-  ) {
-    
-  }
+  ) { }
 
   public showModalOkWindow():void{
     this._dialogService.showDialogOk(this.title, this.message).subscribe(btn =>{

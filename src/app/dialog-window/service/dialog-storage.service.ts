@@ -9,13 +9,12 @@ export class DialogStorageService{
 
     public _dataForWindow = new Subject<DialogWindowModel>();
     
-    public setDataForWindow(dialogWindowModel:DialogWindowModel){
+    public setDataForWindow(dialogWindowModel:DialogWindowModel | undefined){
         this._dataForWindow.next(dialogWindowModel);
     }
 
     public observableDataForWindow():Observable<DialogWindowModel>{
         return this._dataForWindow.asObservable();
     }
-
 
 }

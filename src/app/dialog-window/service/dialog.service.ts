@@ -7,9 +7,7 @@ import { DialogStorageService } from "./dialog-storage.service";
 @Injectable()
 export class DialogWindowService{
 
-    constructor(private readonly _dialogStorageService: DialogStorageService) {
-    }
-
+    constructor(private readonly _dialogStorageService: DialogStorageService) { }
 
     public showDialog(title:string, message:string, buttons:DialogButtonModel[]):void{
         let model = {
@@ -62,6 +60,6 @@ export class DialogWindowService{
     }
 
     public closeDialog():void{
-        this._dialogStorageService.setDataForWindow( {} as any);
+        this._dialogStorageService.setDataForWindow(undefined);
     }
 }
